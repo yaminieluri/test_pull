@@ -3,6 +3,7 @@ node{
   git 'https://github.com/yaminieluri/test_pull' 
  }
  stage('Compile-Package'){
+  def mvnhome= tool name: 'maven', type: 'maven'
   sh "mvn package"
  }
 }
